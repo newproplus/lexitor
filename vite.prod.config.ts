@@ -6,23 +6,17 @@
  *
  */
 
-// TODO: xadd
-// import babel from '@rollup/plugin-babel';
 import react from '@vitejs/plugin-react';
-import path from 'path';
 import {defineConfig} from 'vite';
 import {replaceCodePlugin} from 'vite-plugin-replace';
 
 import viteCopyEsm from './viteCopyEsm';
-// TODO: xadd
-// import moduleResolution from './viteModuleResolution';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
     outDir: './build',
     target: 'esnext',
-    minify: 'terser',
     lib: {
       entry: 'src/App.tsx',
       name: 'Lexitor',
@@ -38,9 +32,23 @@ export default defineConfig({
         },
       },
     },
+
+    reportCompressedSize: false,
+    sourcemap: false,
+    // minify: true,
+    minify: 'terser',
     terserOptions: {
+      output: {
+        comments: false,
+        beautify: false,
+      },
       compress: {
         toplevel: true,
+        drop_console: true,
+        collapse_vars: true,
+        reduce_vars: true,
+        drop_debugger: true,
+        keep_infinity: true,
       },
     },
   },
@@ -56,22 +64,10 @@ export default defineConfig({
         },
       ],
     }),
-    // TODO: xadd
-    // babel({
-    //   babelHelpers: 'bundled',
-    //   babelrc: false,
-    //   configFile: false,
-    //   exclude: '/**/node_modules/**',
-    //   extensions: ['jsx', 'js', 'ts', 'tsx', 'mjs'],
-    //   plugins: ['@babel/plugin-transform-flow-strip-types'],
-    //   presets: ['@babel/preset-react'],
-    // }),
     react(),
     viteCopyEsm(),
   ],
   resolve: {
-    // TODO: xadd
-    // alias: moduleResolution,
     alias: {
       '@': '/src',
       'shared/invariant': '/src/shared/invariant',

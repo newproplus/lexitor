@@ -1,7 +1,14 @@
 {
   "name": "lexitor",
   "description": "A rich text editor based on lexical playground",
-  "version": "0.1.0",
+  "homepage": "https://github.com/lexitor/lexitor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lexitor/lexitor.git"
+  },
+  "version": "0.1.2",
+  "private": false,
+  "license": "MIT",
   "type": "module",
   "files": [
     "build"
@@ -24,9 +31,11 @@
     "@excalidraw/excalidraw": "^0.17.0",
     "@lexical/clipboard": "0.14.3",
     "@lexical/code": "0.14.3",
+    "@lexical/dragon": "^0.14.3",
     "@lexical/file": "0.14.3",
     "@lexical/hashtag": "0.14.3",
     "@lexical/headless": "^0.14.3",
+    "@lexical/history": "^0.14.3",
     "@lexical/link": "0.14.3",
     "@lexical/list": "0.14.3",
     "@lexical/mark": "0.14.3",
@@ -59,6 +68,7 @@
     "@types/react-dom": "^18.2.24",
     "@vitejs/plugin-react": "^1.0.7",
     "rollup-plugin-copy": "^3.5.0",
+    "terser": "^5.30.3",
     "vite": "^2.9.16",
     "vite-plugin-replace": "0.1.1"
   },

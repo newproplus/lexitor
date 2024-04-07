@@ -28,7 +28,7 @@
     "target": "ES2020",
     "types": ["node", "react"]
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "types_prettier.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["__tests__/**", "dist/**", "build/**", "node_modules/**"],
   "typedocOptions": {
     "logLevel": "Verbose"
