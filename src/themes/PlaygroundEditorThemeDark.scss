@@ -1,0 +1,290 @@
+.dark {
+  $backgroundColor: rgb(101, 103, 107);
+  $backgroundColor2: #111;
+  $borderColor: #666;
+  $borderColor2: #999;
+  $color: rgb(240, 242, 245);
+  $color2: #919191;
+  $linkColor: rgb(129, 181, 255);
+
+  .PlaygroundEditorTheme__quote {
+    color: $color;
+    border-left-color: $borderColor2;
+  }
+  .PlaygroundEditorTheme__h1 {
+    color: $color;
+  }
+  .PlaygroundEditorTheme__h2 {
+    color: $color;
+  }
+  .PlaygroundEditorTheme__textCode {
+    background-color: $backgroundColor;
+  }
+  .PlaygroundEditorTheme__hashtag {
+    background-color: rgba(88, 144, 255, 0.15);
+    border-bottom: 1px solid rgba(88, 144, 255, 0.3);
+  }
+  .PlaygroundEditorTheme__link {
+    color: $linkColor;
+  }
+  .PlaygroundEditorTheme__code {
+    background-color: $backgroundColor;
+  }
+  .PlaygroundEditorTheme__code:before {
+    content: attr(data-gutter);
+    background-color: #eee;
+    border-right: 1px solid #ccc;
+    color: #777;
+  }
+  .PlaygroundEditorTheme__tableSelected {
+    outline: 2px solid rgb(60, 132, 244);
+  }
+  .PlaygroundEditorTheme__tableCell {
+    border: 1px solid #bbb;
+  }
+  .PlaygroundEditorTheme__tableCellSortedIndicator {
+    background-color: #999;
+  }
+  .PlaygroundEditorTheme__tableCellHeader {
+    background-color: $backgroundColor2;
+  }
+  .PlaygroundEditorTheme__tableCellSelected {
+    background-color: #c9dbf0;
+  }
+  .PlaygroundEditorTheme__tableCellPrimarySelected {
+    border: 2px solid rgb(60, 132, 244);
+  }
+  .PlaygroundEditorTheme__tableCellEditing {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    border-radius: 3px;
+  }
+  .PlaygroundEditorTheme__tableAddColumns {
+    background-color: #eee;
+  }
+  .PlaygroundEditorTheme__tableAddColumns:hover {
+    background-color: #c9dbf0;
+  }
+  .PlaygroundEditorTheme__tableAddRows {
+    background-color: #eee;
+  }
+  .PlaygroundEditorTheme__tableAddRows:hover {
+    background-color: #c9dbf0;
+  }
+  .PlaygroundEditorTheme__tableCellResizeRuler {
+    background-color: rgb(60, 132, 244);
+  }
+  .PlaygroundEditorTheme__tableCellActionButton {
+    background-color: #eee;
+  }
+  .PlaygroundEditorTheme__tableCellActionButton:hover {
+    background-color: $color2;
+  }
+  .PlaygroundEditorTheme__characterLimit {
+    background-color: #ffbbbb !important;
+  }
+  .PlaygroundEditorTheme__listItemUnchecked:focus:before,
+  .PlaygroundEditorTheme__listItemChecked:focus:before {
+    box-shadow: 0 0 0 2px #a6cdfe;
+  }
+  .PlaygroundEditorTheme__listItemUnchecked:before {
+    border: 1px solid #999;
+  }
+  .PlaygroundEditorTheme__listItemChecked:before {
+    border: 1px solid rgb(61, 135, 245);
+    background-color: #3d87f5;
+  }
+  .PlaygroundEditorTheme__listItemChecked:after {
+    border-color: $borderColor;
+  }
+  .PlaygroundEditorTheme__tokenComment {
+    color: slategray;
+  }
+  .PlaygroundEditorTheme__tokenPunctuation {
+    color: #999;
+  }
+  .PlaygroundEditorTheme__tokenProperty {
+    color: #905;
+  }
+  .PlaygroundEditorTheme__tokenSelector {
+    color: #690;
+  }
+  .PlaygroundEditorTheme__tokenOperator {
+    color: #c9924e;
+  }
+  .PlaygroundEditorTheme__tokenAttr {
+    color: #07a;
+  }
+  .PlaygroundEditorTheme__tokenVariable {
+    color: #e90;
+  }
+  .PlaygroundEditorTheme__tokenFunction {
+    color: #dd4a68;
+  }
+  .PlaygroundEditorTheme__mark {
+    background: rgba(255, 212, 0, 0.14);
+    border-bottom: 2px solid rgba(255, 212, 0, 0.3);
+  }
+  .PlaygroundEditorTheme__markOverlap {
+    background: rgba(255, 212, 0, 0.3);
+    border-bottom: 2px solid rgba(255, 212, 0, 0.7);
+  }
+  .PlaygroundEditorTheme__mark.selected {
+    background: rgba(255, 212, 0, 0.5);
+    border-bottom: 2px solid rgba(255, 212, 0, 1);
+  }
+  .PlaygroundEditorTheme__markOverlap.selected {
+    background: rgba(255, 212, 0, 0.7);
+    border-bottom: 2px solid rgba(255, 212, 0, 0.7);
+  }
+  .PlaygroundEditorTheme__embedBlockFocus {
+    outline: 2px solid rgb(60, 132, 244);
+  }
+  .PlaygroundEditorTheme__layoutItem {
+    border: 1px dashed #ddd;
+  }
+
+  //
+  // 后面的是补充 index.css 里的
+  //
+  @mixin icon-styles() {
+    .icon,
+    i {
+      filter: invert(100%);
+    }
+  }
+
+  .editor-shell {
+    color: $color;
+
+    .editor-container {
+      background: $backgroundColor;
+    }
+
+    .toolbar {
+      background: $backgroundColor2;
+
+      .toolbar-item {
+        &:hover:not([disabled]) {
+          background-color: $backgroundColor;
+        }
+
+        &:disabled {
+          i.format {
+            opacity: 0.4;
+          }
+        }
+
+        &.font-size-input {
+          color: $color;
+          background-color: $backgroundColor;
+        }
+
+        .text {
+          color: #ccc;
+        }
+
+        @include icon-styles();
+      }
+    }
+  }
+
+  .floating-text-format-popup {
+    color: $color2;
+    background-color: $backgroundColor2;
+
+    @include icon-styles();
+
+    .popup-item:hover:not([disabled]) {
+      background-color: $backgroundColor;
+    }
+  }
+
+  .link-editor {
+    color: $color2;
+    background-color: $backgroundColor2;
+
+    .link-input {
+      color: $color;
+      background-color: $backgroundColor;
+    }
+
+    .link-view a {
+      color: $linkColor;
+    }
+    // icons
+    .link-edit,
+    .link-trash,
+    .link-cancel,
+    .link-confirm {
+      filter: invert(80%);
+    }
+  }
+
+  .Input__wrapper {
+    .Input__label {
+      color: $color;
+    }
+  }
+
+  .draggable-block-menu {
+    &:hover {
+      background-color: $backgroundColor2;
+    }
+
+    .icon {
+      filter: invert(100%);
+    }
+  }
+
+  .code-action-menu-container {
+    button.menu-item,
+    .code-highlight-language {
+      filter: invert(100%);
+    }
+  }
+
+  .PollNode__container {
+    .PollNode__heading {
+      color: $color;
+      background-color: $backgroundColor;
+    }
+
+    .PollNode__optionInput::placeholder {
+      color: $color;
+    }
+  }
+
+  .lexitor.editor-shell {
+    color: $color;
+  }
+
+  .lexitor___dropdown {
+    background-color: $backgroundColor;
+
+    .item {
+      color: $color;
+      background-color: $backgroundColor;
+
+      &:hover {
+        background-color: $backgroundColor2;
+      }
+
+      .switch {
+        color: $color;
+      }
+
+      @include icon-styles();
+    }
+  }
+
+  .lexitor___Modal__overlay {
+    .Modal__modal {
+      color: $color;
+      background-color: $backgroundColor;
+
+      .Modal__title {
+        color: $color;
+      }
+    }
+  }
+}

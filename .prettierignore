@@ -1,0 +1,7 @@
+# NOTE: In general this should be kept in sync with .eslintignore
+
+**/*.md
+**/*.js.flow
+**/node_modules
+**/__tests__
+.prettierignore

@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationDir": "./build/types",
+    "downlevelIteration": true,
+    "emitDeclarationOnly": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "jsx": "preserve",
+    "lib": ["dom", "esnext", "dom.iterable"],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": false,
+    "outDir": "./build",
+    // "outFile": "./build/types.d.ts",
+    "paths": {
+      "@/*": ["./src/*"],
+      "shared/*": ["src/shared/*"]
+    },
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "ES2020",
+    "types": ["node", "react"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "types_prettier.d.ts"],
+  "exclude": ["__tests__/**", "dist/**", "build/**", "node_modules/**"],
+  "typedocOptions": {
+    "logLevel": "Verbose"
+  }
+}

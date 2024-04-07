@@ -1,0 +1,8 @@
+.icon {
+  &.settings {
+    background-image: url(../images/icons/gear.svg);
+  }
+  &.settings-dev {
+    background-image: url(../images/icons/wrench-adjustable.svg);
+  }
+}

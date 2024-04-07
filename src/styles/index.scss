@@ -1,0 +1,16 @@
+@use 'icon.scss';
+@use 'editor_shell.scss';
+
+:root {
+  --lxc-highlightBkgColor: #8abcd1;
+  --lxc-highlightTextColor: #5698c3;
+}
+
+button.item.dropdown-item-active {
+  background-color: var(--lxc-highlightBkgColor) !important;
+}
+
+button.item.dropdown-item-active-text {
+  font-weight: 700;
+  color: var(--lxc-highlightTextColor) !important;
+}
